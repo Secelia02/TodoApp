@@ -5,6 +5,58 @@
     <title>Document</title>
 </head>
 
+<body>
+    <div id="header">
+        <h1>Todoey</h1>
+    </div>
+    <div id="content">
+        <div id="todoForm">
+
+            <h1>What needs to get done today?</h1>
+            <div>
+                <span>Description</span>
+                <input id="newTodoDesciption" type="text" placeholder="Clean my gym bag" />
+            </div>
+            <div>
+                <span>Done by</span>
+                <input id="newTodoTime" type="time" />
+            </div>
+
+            <div>
+                <button onclick='
+                    let newTodoDesciptionHTML = document.getElementById("newTodoDesciption")
+                    let newTodoDesciption = newTodoDesciptionHTML.value
+
+                    let newTodoTimeHTML = document.getElementById("newTodoTime")
+                    let newTodoTime = newTodoTimeHTML.value
+                    console.log(newTodoDesciption)
+                    console.log(newTodoTime)
+
+                    let todoContainer = document.getElementById("todoContainer")
+                    let newTodo = document.createElement("div")
+                    newTodo.className = "todoItem"
+                    newTodo.innerHTML = "<h1>" + newTodoDesciption + "</h1><h2>Due by: " + newTodoTime + "</h2>"
+                    todoContainer.appendChild(newTodo)
+
+
+                    
+                    '>Add to list</button>
+            </div>
+            
+
+        </div>
+        <div id="todoContainer">
+            <div class="todoItem">
+                <h1>Test Todo</h1>
+                <h2>Due by: 12:00am</h2>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+
 <style>
     html, body {
         margin: 0;
@@ -82,54 +134,4 @@
     }
 
 </style>
-<body>
-    <div id="header">
-        <h1>Todoey</h1>
-    </div>
-    <div id="content">
-        <div id="todoForm">
-
-            <h1>What needs to get done today?</h1>
-            <div>
-                <span>Description</span>
-                <input id="newTodoDesciption" type="text" placeholder="Clean my gym bag" />
-            </div>
-            <div>
-                <span>Done by</span>
-                <input id="newTodoTime" type="time" />
-            </div>
-
-            <div>
-                <button onclick='
-                    let newTodoDesciptionHTML = document.getElementById("newTodoDesciption")
-                    let newTodoDesciption = newTodoDesciptionHTML.value
-
-                    let newTodoTimeHTML = document.getElementById("newTodoTime")
-                    let newTodoTime = newTodoTimeHTML.value
-                    console.log(newTodoDesciption)
-                    console.log(newTodoTime)
-
-                    let todoContainer = document.getElementById("todoContainer")
-                    let newTodo = document.createElement("div")
-                    newTodo.className = "todoItem"
-                    newTodo.innerHTML = "<h1>" + newTodoDesciption + "</h1><h2>Due by: " + newTodoTime + "</h2>"
-                    todoContainer.appendChild(newTodo)
-
-
-                    
-                    '>Add to list</button>
-            </div>
-            
-
-        </div>
-        <div id="todoContainer">
-            <div class="todoItem">
-                <h1>Test Todo</h1>
-                <h2>Due by: 12:00am</h2>
-            </div>
-
-        </div>
-    </div>
-
-</body>
 </html>

@@ -24,8 +24,15 @@
 
             <div>
                 <button onclick='
-
-
+                   let todoContainer = document.getElementById("todoContainer")
+                   let newTodoDescription = document.getElementById("newTodoDesciption")
+                   newTodoDescription = newTodoDescription.value
+                   let newTodoTime = document.getElementById("newTodoTime")
+                   newTodoTime = newTodoTime.value
+                   todoContainer.innerHTML += `<div class="todoItem">
+                                            <h1>${newTodoDescription}</h1>
+                                            <h2>Due by: ${newTodoTime}</h2>
+                                            </div>`
                     
                     '>Add to list</button>
             </div>
@@ -37,6 +44,7 @@
                 <h1>Test Todo</h1>
                 <h2>Due by: 12:00am</h2>
             </div>
+            
 
         </div>
     </div>
